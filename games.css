@@ -1,0 +1,69 @@
+body {
+    width: 60%;
+    margin: 0 auto;
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.container {
+    border: 2px black solid;
+    border-radius: 20px;
+    height: 325vh;
+    padding: 0 1em;
+    background-color: #b8b8b8;
+}
+
+.grid {
+    margin-top: 1em;
+    display: grid;
+    grid-template: 
+    "1 2 3";
+    grid-row-gap: 1em;
+    align-items: center;
+}
+
+/* .g1 {grid-area: g1;}
+.g2 {grid-area: g2;}
+.g3 {grid-area: g3;}
+.g4 {grid-area: g4;}
+.g5 {grid-area: g5;}
+.g6 {grid-area: g6;}
+.g7 {grid-area: g7;}
+.g8 {grid-area: g8;}
+.g9 {grid-area: g9;} */
+
+img {
+    width: 10em;
+    height: 10em;
+    border: 1px solid black;
+    border-radius: 10px;
+    box-shadow: black 3px 3px 3px;
+}
+
+select {
+    height: 2em;
+    margin-top: 1em;
+    border-radius: 15px;
+    border: 2px solid black;
+    cursor: pointer;
+}
+
+#btn {
+    height: 2em;
+    font-weight: bold;
+    border-radius: 15px;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    padding: 0 1em;
+}
+
+h2 {
+    margin-top: 2em;
+}
+
+hr {
+    margin-top: 1em;
+    background-color: black;
+    height: 0.05em;
+}
