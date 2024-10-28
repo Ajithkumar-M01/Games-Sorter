@@ -31,7 +31,7 @@ button.addEventListener("click", displayGames)
 const resultDiv = document.createElement ("div")
 resultDiv.classList.add ("grid")
 const container = document.querySelector (".container")
-container.appendChild (resultDiv)
+container.appendChild(resultDiv)
 
 function displayGames() {
     const input = document.getElementById ("input")
@@ -72,19 +72,23 @@ function displayGames() {
         resultDiv.textContent = ""
         for (let i = 0; i < gamesRating.length; i++) {
             const img = document.createElement("img")
+            img.classList.add("game-img")
             img.src = `${gamesImg[i]}.jpg`
             resultDiv.appendChild(img)
             
             
             const title = document.createElement("h3")
+            title.classList.add("game-title")
             title.textContent = gamesTitle[i]
             resultDiv.appendChild(title)
-            
-    
-            
-            const fill = document.createElement("p")
-            fill.textContent = ""
-            resultDiv.appendChild(fill)
+                    
+            const fill1 = document.createElement("p")
+            fill1.textContent = ""
+            resultDiv.appendChild(fill1)
+
+            const fill2 = document.createElement("p")
+            fill2.textContent = ""
+            resultDiv.appendChild(fill2)
   
             console.log ("alllll")
             // const img = document.createElement("img")
@@ -156,22 +160,25 @@ function displayGames() {
                 image: gamesImg [index]
             }
         }).sort((a, b) => b.rating - a.rating)
+
     
         for (let i = 0; i < sortedRating.length; i++) {
+
             const img = document.createElement("img")
             // img.src = `${gamesImg[gamesTitle.indexOf(sortedGames[i].title)]}.jpg`
             img.src = `${sortedRating[i].image}.jpg`
             resultDiv.appendChild(img)
     
-            
             const title = document.createElement("h3")
             title.textContent = sortedRating[i].title
             resultDiv.appendChild(title)
-    
-            
+                
             const rating = document.createElement("p")
             rating.textContent = `Rating: ${sortedRating[i].rating} / 10`
             resultDiv.appendChild(rating)
+
+            const line = document.createElement("hr")
+            resultDiv.appendChild(line)
 
             console.log("ratinggggg")
         }
@@ -203,6 +210,9 @@ function displayGames() {
             sold.innerText = `${sortedSold[i].sold} million copies sold`
             resultDiv.appendChild(sold)
 
+            const line = document.createElement("hr")
+            resultDiv.appendChild(line)
+
             console.log("soldddddd")
         }
     }
@@ -230,6 +240,9 @@ function displayGames() {
             const year = document.createElement("p")
             year.innerText = sortedYear[i].year
             resultDiv.appendChild(year)
+
+            const line = document.createElement("hr")
+            resultDiv.appendChild(line)
 
             console.log("yearrrrr")
         }
@@ -259,6 +272,9 @@ function displayGames() {
             fill.innerText = ""
             resultDiv.appendChild(fill)
 
+            const line = document.createElement("hr")
+            resultDiv.appendChild(line)
+
             console.log("alphaaaaa")
         }
     
@@ -287,6 +303,9 @@ function displayGames() {
             const cost = document.createElement("p")
             cost.textContent = `INR ${sortedCostLow[i].cost}`
             resultDiv.appendChild(cost)
+
+            const line = document.createElement("hr")
+            resultDiv.appendChild(line)
         }
     }
     
@@ -313,6 +332,9 @@ function displayGames() {
             const cost = document.createElement("p")
             cost.innerText = `INR ${sortedCostHigh[i].cost}`
             resultDiv.appendChild(cost)
+
+            const line = document.createElement("hr")
+            resultDiv.appendChild(line)
         }
     }
     
